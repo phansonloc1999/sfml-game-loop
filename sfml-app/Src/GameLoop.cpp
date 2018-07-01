@@ -1,7 +1,7 @@
 #include "..\Headers\GameLoop.h"
 
-sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), GAME_TITLE);
 sf::Event event;
+sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), GAME_TITLE);
 
 void GameLoop::load()
 {
@@ -17,18 +17,8 @@ void GameLoop::update()
 		case sf::Event::Closed:
 			window.close();
 			break;
-		case sf::Event::KeyPressed:
-			if (event.key.code == sf::Keyboard::Enter)
-			{
-				enterPressed = true;
-			}
-			break;
 		}
 	}
-
-	check();
-
-	enterPressed = false;
 }
 
 void GameLoop::render()
@@ -36,12 +26,4 @@ void GameLoop::render()
 	window.clear();
 
 	window.display();
-}
-
-void check()
-{
-	if (enterPressed)
-	{
-		std::cout << "Entered!" << std::endl;
-	}
 }

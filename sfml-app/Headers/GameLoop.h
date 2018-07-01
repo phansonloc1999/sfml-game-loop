@@ -2,8 +2,6 @@
 #include "Constants.h"
 #include "ObjectSprite.h"
 
-void check();
-
 class GameLoop
 {
 public:

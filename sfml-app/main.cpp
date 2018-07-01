@@ -2,8 +2,9 @@
 #include "Headers\ObjectSprite.h"
 #include "Headers\GameLoop.h"
 
-extern sf::RenderWindow window;
+//extern sf::RenderWindow window;
 extern sf::Event event;
+extern sf::RenderWindow window;
 
 int main()
 {
